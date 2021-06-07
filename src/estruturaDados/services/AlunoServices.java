@@ -7,9 +7,7 @@ public class AlunoServices {
         String escolha = null;
         do {
         System.out.println(opcoesAluno());
-
         escolha = Main.sc.next();
-        
             if (escolha.contains("1")) {
                 LivroServices.consultarLivroPeloNome();
             } else if (escolha.contains("2")) {
@@ -22,11 +20,6 @@ public class AlunoServices {
         return Boolean.TRUE;
 
     }
-
-    // public
-    // protected
-    // private
-
     /**
      * 
      * @return Opcoes que podem ser escolhidas pelo Aluno
