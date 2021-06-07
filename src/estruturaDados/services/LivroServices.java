@@ -9,13 +9,14 @@ import estruturaDados.domain.Livro;
 public class LivroServices {
 
     public static void listarLivrosCadastrados() {
-
+        imprimeLivro(Main.livros);
     };
 
     public static void consultarLivroPeloIsbn() {
         System.out.println("\nDigite o número do ISBN: ");
         String isbn = Main.sc.next();
-        imprimeLivro(Main.livros.stream().filter(l -> l.getIsbn() == Integer.parseInt(isbn)).collect(Collectors.toList()));
+        imprimeLivro(
+                Main.livros.stream().filter(l -> l.getIsbn() == Integer.parseInt(isbn)).collect(Collectors.toList()));
     }
 
     public static void consultarLivroPeloNome() {
@@ -26,8 +27,12 @@ public class LivroServices {
     }
 
     private static void imprimeLivro(List<Livro> livros) {
+        if (livros.isEmpty()) {
+            System.out.println("Não temos nenhum livro cadastrado");
+        }
         livros.forEach(l -> {
             System.out.println(l.toString());
         });
+
     }
 }
