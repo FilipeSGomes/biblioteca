@@ -20,6 +20,13 @@ public class AlunoServices {
         return Boolean.TRUE;
 
     }
+    
+    public static void cadastrarAluno() {
+        
+        
+        
+    }
+    
     /**
      * 
      * @return Opcoes que podem ser escolhidas pelo Aluno

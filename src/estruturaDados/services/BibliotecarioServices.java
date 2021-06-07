@@ -10,7 +10,7 @@ public class BibliotecarioServices {
             System.out.println(opcoesBibliotecario());
             escolha = Main.sc.next();
             if (escolha.contains("1")) {
-                System.out.println("Função em desenvolvimento");
+                AlunoServices.cadastrarAluno();
             } else if (escolha.contains("2")) {
                 System.out.println("Função em desenvolvimento");
             } else if (escolha.contains("3")) {
